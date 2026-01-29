@@ -7,15 +7,16 @@ st.title("Excelクイズ学習ツール")
 # ブラウザ上でファイルをアップロードして試す場合は st.file_uploader を使います
 @st.cache_data
 def load_data():
+    quiz_data.xlsx
     # 本番は 'quiz_data.xlsx' などファイル名を指定
     # ここでは動作確認用に簡易的なデータを作成します
-    data = {
-        '問題': ['Pythonのフレームワークは？', 'Streamlitの実行コマンドは？'],
-        '選択肢A': ['Django', 'run'],
-        '選択肢B': ['Ruby on Rails', 'hello'],
-        '選択肢C': ['Laravel', 'start'],
-        '正解': ['Django', 'run']
-    }
+    # data = {
+    #    '問題': ['Pythonのフレームワークは？', 'Streamlitの実行コマンドは？'],
+    #    '選択肢A': ['Django', 'run'],
+    #    '選択肢B': ['Ruby on Rails', 'hello'],
+    #    '選択肢C': ['Laravel', 'start'],
+    #    '正解': ['Django', 'run']
+    #}
     return pd.DataFrame(data)
 
 df = load_data()
